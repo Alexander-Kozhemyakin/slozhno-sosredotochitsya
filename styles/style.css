@@ -1,5 +1,315 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font-family: var(--main-font-family), sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.rec {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  font-size: 18px;
+}
+
+.rec::before {
+  content: "REC";
+  color: var(--accent-color, #ff0070);
+  margin-inline-end: 28px;
+}
+
+.rec::after {
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  position: absolute;
+  inset-inline-end: 8px;
+  inset-block-start: 8px;
+  background-color: var(--accent-color, #ff0070);
+  border-radius: 50%;
+}
+
+.decorated-zone {
+  min-block-size: 97vh;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header-footer {
+  position: relative;
+  align-items: center;
+}
+
+.header-footer::before {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.header-footer::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--accent-color, #ff0070);
+  inset-inline-start: 0;
+  inset-block-end: 0;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__title {
+  color: var(--title-header-footer, #db00ff);
+  font-weight: bold;
+  line-height: 83%;;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--shadow-title);
+  justify-self: start;
+}
+
+.header__title-text {
+  display: block;
+  font-size: var(--text-size, 18px);
+  font-weight: bold;
+  color: var(--main-title-text, #000028);
+  background-color: var(--background-title, #ff0070);
+  max-inline-size: clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem);
+  justify-self: end;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+ /* не забыть убрать или поменять, forgot... */
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color, #ff0070);
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+
+  &:hover {
+    cursor: pointer;
+    padding: 2px 12px;
+    border: 1px solid var(--accent-color, #ff0070);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-bottom: 1px solid var(--accent-color);
+  }
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color, #ff0070);
+  padding: 2px 12px;
+  pointer-events: none;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.content section {
+  margin-block-start: 50px;
+}
+
+.content section:first-child {
+  margin-block-start: 40px;
+}
+
+.section__title {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: var(--text-size, 18px);
+}
+
+.section__list {
+  display: grid;
+  gap: 20px;
+}
+
+.section__list-item {
+  display: grid;
+  gap: 10px;
+}
+
+.section__list-title {
+  color: var(--main-title-text, #000028);
+  background-color: var(--background-title, #ff0070);
+  font-size: var(--text-size, 18px);
+}
+
+.section__content {
+  font-size: var(--text-size, 18px);
+  font-weight: normal;
+  color: var(--section-color-text, #f1b2ce);
+  line-height: 130%;
+}
+
+.section__content-link {
+  text-shadow: 2px 2px 0 var(--shadow-text-link);
+  text-decoration: none;
+  /* &:hover {
+    text-decoration: underline;  появляется подчеркивание у тени
+  } */  
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--section-color-text);
+  }
+   /* все что пойдет ниже экспериментально */
+  position: relative;
+}
+
+.section__content-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+   /* до этого момента, не забыть убрать, так работает, оставляем */
+.section__list-subtitle {
+  font-weight: normal;
+  color: var(--main-title-text, #000028);
+  background-color: var(--background-title, #ff0070);
+  font-size: var(--text-size, 18px);
+}
+
+.images__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+.images__list-item img {
+  inline-size: 100%;
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 40px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 20px;
+  }
+
+  .header__title {
+    margin-inline-start: -12px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .section-why,
+  .section-how {
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .section-how {
+    margin-block-start: 80px;
+  }
+
+  .images__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .images__list-item img {
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .images__list-item:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+
+  .images__list-item:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .images__list-item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .images__list-item:nth-child(5) {
+    grid-column: 2 / 4;
+  }
+
+  .section__images .section__title {
+    margin-block-start: 80px;
+  }
+
+  .header__title-text {
+    max-inline-size: 364px;
+  }
+
+  .content section:first-child {
+    margin-block-start: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title-text {
+    max-inline-size: 491px;
+  }
+
+  .section-what .section__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .section-what {
+    margin-block-start: 80px;
+  }
 }
