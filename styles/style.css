@@ -36,7 +36,7 @@
 }
 
 .decorated-zone {
-  min-block-size: 97vh;
+  min-block-size: 100vh;
 }
 
 .header {
@@ -78,7 +78,7 @@
 .header__title {
   color: var(--title-header-footer, #db00ff);
   font-weight: bold;
-  line-height: 83%;;
+  line-height: 83%;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--shadow-title);
   justify-self: start;
@@ -94,7 +94,7 @@
   justify-self: end;
 }
 
-.header__theme-menu-list{
+.header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -174,9 +174,7 @@
 .section__content-link {
   text-shadow: 2px 2px 0 var(--shadow-text-link);
   text-decoration: none;
-  /* &:hover {
-    text-decoration: underline;  появляется подчеркивание у тени
-  } */  
+  
   &:focus {
     outline: none;
   }
@@ -245,6 +243,10 @@
 
   .section-how {
     margin-block-start: 80px;
+  }
+
+  .section-what .section__title {
+    max-width: calc(100% / 3.1);
   }
 
   .images__list {
