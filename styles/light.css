@@ -27,8 +27,8 @@
     display: none;
   }
 }
-
-@media (prefers-color-scheme: light) {
+  
+  @media (prefers-color-scheme: light) {
   
   :root {
         /* Дублируем переменные светлой темы */ 

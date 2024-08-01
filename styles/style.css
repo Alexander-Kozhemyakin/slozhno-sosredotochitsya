@@ -36,12 +36,13 @@
 }
 
 .decorated-zone {
-  min-block-size: 97vh;
+  max-block-size: 97vh;
 }
 
 .header {
   display: grid;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-rows: 1fr max-content 1fr;
+  height: 100vh;
 }
 
 .header-footer {
@@ -117,10 +118,10 @@
   &:focus {
     outline: none;
   }
+}
 
-  &:focus-visible {
-    border-bottom: 1px solid var(--accent-color);
-  }
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -173,6 +174,7 @@
 }
 
 .section__content-link {
+  position: relative;
   text-shadow: 2px 2px 0 var(--shadow-text-link);
   text-decoration: none;
   
@@ -183,8 +185,6 @@
   &:focus-visible {
     outline: 1px solid var(--section-color-text);
   }
-   /* все что пойдет ниже экспериментально */
-  position: relative;
 }
 
 .section__content-link:hover::after {
@@ -224,6 +224,7 @@
   justify-content: center;
   align-items: center;
   margin-block-start: 40px;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -232,7 +233,7 @@
   }
 
   .decorated-zone {
-    min-block-size: 95vh;
+    max-block-size: 95vh;
   }
 
   .header__title {
@@ -298,7 +299,7 @@
 
 @media (min-width: 1024px) {
   .decorated-zone {
-    min-block-size: 94vh;
+    max-block-size: 94vh;
   }
 
   .header__theme-menu {
