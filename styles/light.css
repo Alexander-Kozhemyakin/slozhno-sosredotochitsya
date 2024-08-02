@@ -28,19 +28,19 @@
   display: none;
 }
 
-  @media (prefers-color-scheme: light) {
-    :root {
-        /* Дублируем переменные светлой темы */ 
-        --accent-color: #353430;
-        --title-header-footer: #FFC2E6;
-        --main-title-text: #353430;
-        --section-color-text: #353430;
-        --main-font-family: "IBM Plex Mono";
-        --text-size: 18px;
-        --background-image: url("../images/cover-image-light.png");
-        --background-title: #ff8dcb;
-        --shadow-title: #ff8dcb;
-        --shadow-text-link: #ff8dcb;
+@media (prefers-color-scheme: light) {
+  :root {
+      /* Дублируем переменные светлой темы */ 
+    --accent-color: #353430;
+    --title-header-footer: #FFC2E6;
+    --main-title-text: #353430;
+    --section-color-text: #353430;
+    --main-font-family: "IBM Plex Mono";
+    --text-size: 18px;
+    --background-image: url("../images/cover-image-light.png");
+    --background-title: #ff8dcb;
+    --shadow-title: #ff8dcb;
+    --shadow-text-link: #ff8dcb;
   }
      
   .rec {
