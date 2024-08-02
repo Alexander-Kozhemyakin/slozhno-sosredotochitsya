@@ -7,7 +7,6 @@
   background-position: top center;
   background-size: cover;
   font-family: var(--main-font-family), sans-serif;
-  margin: 0 auto;
   padding: 10px;
 }
 
@@ -36,7 +35,7 @@
 }
 
 .decorated-zone {
-  min-block-size: 100vh;
+  min-block-size: 97vh;
 }
 
 .header {
@@ -92,6 +91,7 @@
   background-color: var(--background-title, #ff0070);
   max-inline-size: clamp(22.1875rem, 21.6508rem + 2.2901vw, 22.75rem);
   justify-self: end;
+  margin-block-end: 5px;
 }
 
 .header__theme-menu-list {
@@ -136,10 +136,6 @@
 
 .content section {
   margin-block-start: 50px;
-}
-
-.content section:first-child {
-  margin-block-start: 40px;
 }
 
 .section__title {
