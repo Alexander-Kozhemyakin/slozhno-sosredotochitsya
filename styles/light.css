@@ -22,12 +22,12 @@
   --background-title: #ff8dcb;
   --shadow-title: #ff8dcb;
   --shadow-text-link: #ff8dcb;
-
-  & .rec {
-    display: none;
-  }
 }
-  
+ 
+.page.theme_light .rec {
+  display: none;
+}
+
   @media (prefers-color-scheme: light) {
   
   :root {
