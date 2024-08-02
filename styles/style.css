@@ -36,7 +36,7 @@
 }
 
 .decorated-zone {
-  max-block-size: 100vh;
+  min-block-size: 100vh;
 }
 
 .header {
@@ -231,9 +231,9 @@
     padding: 20px;
   }
 
-  .decorated-zone {
+  /* .decorated-zone {
     max-block-size: 95vh;
-  }
+  } */
 
   .header__title {
     margin-inline-start: -12px;
@@ -297,9 +297,9 @@
 }
 
 @media (min-width: 1024px) {
-  .decorated-zone {
+  /* .decorated-zone {
     max-block-size: 94vh;
-  }
+  } */
 
   .header__theme-menu {
     justify-self: center;

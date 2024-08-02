@@ -29,8 +29,7 @@
 }
 
   @media (prefers-color-scheme: light) {
-  
-  :root {
+    :root {
         /* Дублируем переменные светлой темы */ 
         --accent-color: #353430;
         --title-header-footer: #FFC2E6;
