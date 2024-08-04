@@ -1,6 +1,7 @@
 .page.theme_light {
   --accent-color: #353430;
   --accent-color-button: rgb(53,52,48, 0.4);
+  --background-color: #FFC2E6;
   --display-rec: none;
   --title-header-footer: #FFC2E6;
   --main-title-text: #353430;
@@ -21,6 +22,7 @@
   :root {
     --accent-color: #353430;
     --accent-color-button: rgb(53,52,48, 0.4);
+    --background-color: #FFC2E6;
     --display-rec: none;
     --title-header-footer: #FFC2E6;
     --main-title-text: #353430;

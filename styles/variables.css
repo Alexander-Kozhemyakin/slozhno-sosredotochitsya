@@ -1,6 +1,7 @@
 :root {
   --accent-color: #FF0070;
   --accent-color-button: rgb(255,0,112, 0.4);
+  --background-color: #000028;
   --display-rec: inline-block;
   --title-header-footer: #DB00FF;
   --main-title-text: #000028;
