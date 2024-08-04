@@ -122,7 +122,7 @@
 .header__theme-menu-button:hover {
   cursor: pointer;
   padding: 2px 12px;
-  border: 1px solid var(--accent-color, #ff0070);
+  border: 1px solid var(--accent-color-button, #ff0070);
 }
 
 .header__theme-menu-button:focus {
@@ -224,7 +224,7 @@
 .images__list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   margin-block-start: 10px;
   font-size: 0;  /*пытался сам решить, спасибо большое*/
 }
@@ -237,8 +237,9 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  margin-block-start: 40px;
+  margin-block-start: 43px;
   height: 100vh;
+  margin-inline-start: 0;
 }
 
 @media (min-width: 768px) {
@@ -329,13 +330,17 @@
   .content section {
     margin-block-start: 80px;
   }
+
+  .footer {
+    margin-block-start: 60px;
+  }
+
+  .footer .header__title {
+    margin-inline-start: 0;
+  }
 }
 
 @media (min-width: 1024px) {
-  .decorated-zone {
-    min-block-size: 95vh;
-  }
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -356,5 +361,10 @@
 
   .section-what {
     margin-block-start: 80px;
+  }
+
+  .section-why,
+  .section-how {
+    grid-template-columns: 1fr 2.06fr;
   }
 }
