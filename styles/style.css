@@ -10,6 +10,7 @@
 }
 
 .rec {
+  display: var(--display-rec);
   position: absolute;
   inset-inline-end: 0;
   inset-block-start: 0;
