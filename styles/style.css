@@ -223,6 +223,10 @@
   font-size: var(--text-size, 18px);
 }
 
+.section-how .section__list {
+  margin-block-start: 20px;
+}
+
 .images__list {
   display: flex;
   flex-direction: column;
